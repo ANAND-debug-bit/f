@@ -1,0 +1,78 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 16px;
+}
+
+.item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.25);
+}
+
+.item:active .tile {
+  transform: scale(0.95);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item:hover .tile {
+    border-color: var(--line-light);
+    background: var(--surface-3);
+  }
+}
+
+.tile {
+  width: 64px;
+  height: 64px;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.icon {
+  color: var(--ink);
+}
+
+.label {
+  width: 100%;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile {
+    transition: none;
+  }
+
+  .item:active .tile {
+    transform: none;
+  }
+}

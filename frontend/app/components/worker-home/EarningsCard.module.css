@@ -1,0 +1,75 @@
+.card {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #141414;
+  color: #FFFFFF;
+  border: 1px solid #242424;
+}
+
+.label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8E8E93;
+}
+
+.amount {
+  display: block;
+  margin-top: 4px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.split span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.split small {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8E8E93;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 14px;
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 8px;
+}
+
+.link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.link:active {
+  opacity: 0.75;
+}
